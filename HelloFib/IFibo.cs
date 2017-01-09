@@ -1,7 +1,7 @@
 namespace HelloFib {
   using System.Numerics;
 
-  internal interface IFibo {
+  public interface IFibo {
     BigInteger Value { get; }
   }
 }

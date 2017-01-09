@@ -1,7 +1,7 @@
 namespace HelloFib {
   using System.Numerics;
 
-  internal class FiboAdd : IFibo {
+  public class FiboAdd : IFibo {
     private readonly IFibo one;
 
     private readonly IFibo two;

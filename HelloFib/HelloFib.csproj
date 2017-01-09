@@ -48,6 +48,7 @@
     <Compile Include="FiboOne.cs" />
     <Compile Include="FiboAdd.cs" />
     <Compile Include="IFibo.cs" />
+    <Compile Include="MemoFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
