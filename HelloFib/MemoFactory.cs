@@ -7,7 +7,7 @@
 
     public override IFibo Fibo(ushort num) {
       IFibo fibo;
-      return this.cache.TryGetValue(num, out fibo) ? fibo : this.cache[num] = base.Fibo(num);
+      return this.cache.TryGetValue(num, out fibo) ? fibo : this.cache[num] = new MemoFibo(base.Fibo(num));
     }
   }
 }
