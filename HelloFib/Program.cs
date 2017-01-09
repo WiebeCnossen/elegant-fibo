@@ -3,7 +3,7 @@
 
   class Program {
     private static void Main() {
-      var factory = new MemoFactory(new FiboFactory());
+      var factory = new MemoFactory();
       while (true) {
         Console.Write("?> ");
         var command = Console.ReadLine().ToLowerInvariant();
