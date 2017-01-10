@@ -1,5 +1,7 @@
 namespace ElegantFibo.Commands {
-  public class CommandFactory : ICommandFactory {
+  using ElegantFibo.Factories;
+
+  public sealed class CommandFactory : ICommandFactory {
     private readonly IFiboFactory fiboFactory;
 
     private readonly string fiboFormat;

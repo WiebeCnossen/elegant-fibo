@@ -1,7 +1,7 @@
 ﻿namespace ElegantFibo.Commands {
   using System;
 
-  public class FiboCommand : Command {
+  public sealed class FiboCommand : Command {
     private readonly IFibo fibo;
 
     private readonly string format;

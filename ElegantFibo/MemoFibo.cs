@@ -2,7 +2,7 @@
   using System;
   using System.Numerics;
 
-  public class MemoFibo : IFibo {
+  public sealed class MemoFibo : IFibo {
     private readonly Lazy<BigInteger> value;
 
     public MemoFibo(IFibo fibo) {

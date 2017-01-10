@@ -1,5 +1,5 @@
 ﻿namespace ElegantFibo.Commands {
-  public class QuitCommand : Command {
+  public sealed class QuitCommand : Command {
     public QuitCommand()
       : base(true) {
     }

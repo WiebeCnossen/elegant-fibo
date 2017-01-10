@@ -1,7 +1,7 @@
 namespace ElegantFibo {
   using System.Numerics;
 
-  public class FiboAdd : IFibo {
+  public sealed class FiboAdd : IFibo {
     private readonly IFibo one;
 
     private readonly IFibo two;

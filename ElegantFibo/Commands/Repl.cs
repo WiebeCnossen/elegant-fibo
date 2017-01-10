@@ -1,7 +1,7 @@
 ﻿namespace ElegantFibo.Commands {
   using System;
 
-  public class Repl {
+  public sealed class Repl {
     private readonly ICommandFactory commandFactory;
 
     private readonly string prompt;
