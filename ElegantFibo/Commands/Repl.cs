@@ -1,10 +1,10 @@
-﻿namespace HelloFib {
+﻿namespace ElegantFibo.Commands {
   using System;
 
   public class Repl {
-    private readonly string prompt;
-
     private readonly ICommandFactory commandFactory;
+
+    private readonly string prompt;
 
     public Repl(string prompt, ICommandFactory commandFactory) {
       this.prompt = prompt;
@@ -14,7 +14,9 @@
     public void Run() {
       while (true) {
         Console.Write($"{this.prompt} ");
-        this.commandFactory.Command(Console.ReadLine()).Execute();
+        var command = this.commandFactory.Command(Console.ReadLine());
+        command.Execute();
+        if (command.Quit) break;
       }
     }
   }

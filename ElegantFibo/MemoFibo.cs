@@ -1,4 +1,4 @@
-﻿namespace HelloFib {
+﻿namespace ElegantFibo {
   using System;
   using System.Numerics;
 

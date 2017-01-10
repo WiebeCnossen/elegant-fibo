@@ -1,7 +1,7 @@
-﻿namespace HelloFib {
+﻿namespace ElegantFibo.Commands {
   using System;
 
-  public class FiboCommand : ICommand {
+  public class FiboCommand : Command {
     private readonly IFibo fibo;
 
     private readonly string format;
@@ -14,6 +14,6 @@
       this.fibo = fibo;
     }
 
-    public void Execute() => Console.WriteLine(this.format, this.num, this.fibo.Value);
+    public override void Execute() => Console.WriteLine(this.format, this.num, this.fibo.Value);
   }
 }

@@ -1,4 +1,4 @@
-namespace HelloFib {
+namespace ElegantFibo.Commands {
   public class CommandFactory : ICommandFactory {
     private readonly IFiboFactory fiboFactory;
 
