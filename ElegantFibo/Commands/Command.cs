@@ -4,6 +4,8 @@
       this.Quit = quit;
     }
 
+    public string Message { get; protected set; }
+
     public bool Quit { get; }
 
     public abstract void Execute();

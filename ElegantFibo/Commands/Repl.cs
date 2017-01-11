@@ -1,21 +1,19 @@
 ﻿namespace ElegantFibo.Commands {
-  using System;
-
   public sealed class Repl {
     private readonly ICommandFactory commandFactory;
 
-    private readonly string prompt;
+    private readonly ITerminal terminal;
 
-    public Repl(string prompt, ICommandFactory commandFactory) {
-      this.prompt = prompt;
+    public Repl(ITerminal terminal, ICommandFactory commandFactory) {
+      this.terminal = terminal;
       this.commandFactory = commandFactory;
     }
 
     public void Run() {
       while (true) {
-        Console.Write($"{this.prompt} ");
-        var command = this.commandFactory.Command(Console.ReadLine());
+        var command = this.commandFactory.Command(this.terminal.Read());
         command.Execute();
+        if (!string.IsNullOrEmpty(command.Message)) this.terminal.Write(command.Message);
         if (command.Quit) break;
       }
     }
